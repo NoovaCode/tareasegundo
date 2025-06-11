@@ -9,12 +9,12 @@
 <body>
     <div class="container-fluid">
         <?php
-            echo '<h1>Usuarios del sistema</h1>';
-            $conn = mysqli_connect('db', 'user1', 'user1.pa55', 'db_ejm1');
+            echo '<h1>Estudiantes del sistema</h1>';
+            $conn = mysqli_connect('db', 'user1', 'user1.pa55', 'universidad');
             if (!$conn) {
                 die("Error de conexión: " . mysqli_connect_error());
             }
-            $query = 'SELECT * FROM Usuarios';
+            $query = 'SELECT * FROM estudiantes';
             $result = mysqli_query($conn, $query);
             if ($result) {
                 echo '<table class="table table-striped">';
